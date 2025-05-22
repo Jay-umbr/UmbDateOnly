@@ -1,40 +1,55 @@
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <ContentTargetFolders>.</ContentTargetFolders>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-	<PackageLicenseFile>LICENSE</PackageLicenseFile>
-  </PropertyGroup>
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<ContentTargetFolders>.</ContentTargetFolders>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+	</PropertyGroup>
 
-  <PropertyGroup>
-    <Version>13.7.2</Version>
-    <PackageId>UmbDateOnly</PackageId>
-    <Product>UmbDateOnly</Product>
-    <Title>UmbDateOnly</Title>
-    <Description>A DateOnly property picker in Umbraco</Description>
-    <Authors>Jakob Nawrocki</Authors>
-    <PackageTags>umbraco plugin package umbraco-marketplace dateonly</PackageTags>
-    <PackageProjectUrl>https://github.com/Jay-umbr/UmbDateOnly</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/Jay-umbr/UmbDateOnly</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageIcon>logo.png</PackageIcon>
-  </PropertyGroup>
+	<PropertyGroup>
+		<Version>13.7.2</Version>
+		<PackageId>UmbDateOnly</PackageId>
+		<Product>UmbDateOnly</Product>
+		<Title>UmbDateOnly</Title>
+		<Description>A DateOnly property picker in Umbraco</Description>
+		<Authors>Jakob Nawrocki</Authors>
+		<PackageTags>umbraco plugin package umbraco-marketplace dateonly</PackageTags>
+		<PackageProjectUrl>https://github.com/Jay-umbr/UmbDateOnly</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/Jay-umbr/UmbDateOnly</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageIcon>logo.png</PackageIcon>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Update="logo.png" Pack="true" PackagePath="" />
-  </ItemGroup>
-  
-  <ItemGroup>
-    <PackageReference Include="Umbraco.Cms.Web.Website" Version="13.7.2" />
-    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="13.7.2" />
-    <None Include="README.md" Pack="true" PackagePath=""/>
-	  <None Include="LICENSE" Pack="true" PackagePath=""/>
-  </ItemGroup>
+	<ItemGroup>
+		<None Update="logo.png" Pack="true" PackagePath="" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <Content Include="App_Plugins\UmbDateOnly\**" ExcludeFromSingleFile="true" CopyToPublishDirectory="Always" />
-    <None Include="buildTransitive\**" Pack="true" PackagePath="buildTransitive" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Umbraco.Cms.Web.Website" Version="13.7.2" />
+		<PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="13.7.2" />
+		<None Include="README.md" Pack="true" PackagePath="" />
+		<None Include="LICENSE" Pack="true" PackagePath="" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="App_Plugins\UmbDateOnly\**" Pack="true" CopyToPublishDirectory="Always" PackagePath="App_Plugins\UmbDateOnly" />
+		<None Include="buildTransitive\**" Pack="true" PackagePath="buildTransitive" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Update="App_Plugins\UmbDateOnly\package.manifest">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Update="App_Plugins\UmbDateOnly\umbdateonly.css">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Update="App_Plugins\UmbDateOnly\umbdateonly.html">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Update="App_Plugins\UmbDateOnly\umbdateonly.js">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
 </Project>
