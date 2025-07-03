@@ -19,7 +19,10 @@ public class DateOnlyValueConverter : IPropertyValueConverter
     public object? ConvertIntermediateToObject(IPublishedElement owner, IPublishedPropertyType propertyType,
         PropertyCacheLevel referenceCacheLevel, object? inter, bool preview)
     {
-        if (inter == null) throw new NullReferenceException(inter?.ToString());
+        if (inter == null)
+        {
+            return null;
+        };
 
         if (inter is DateOnlyModel dto)
         {

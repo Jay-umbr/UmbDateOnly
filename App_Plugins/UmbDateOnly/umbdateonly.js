@@ -4,7 +4,16 @@ angular.module("umbraco").controller("UmbDateOnlyController", function ($scope) 
     } 
 
     $scope.$watch('model.dateValue', function (newVal) {
+        const date = newVal;
         $scope.model.value = extractDateForDB(newVal);
+        let format = $scope.model.config.format;
+        if (format == undefined) {
+            format = "YYYY-MM-DD";
+        }
+        console.log(format);
+
+        $scope.model.formattedDate = format.replace("YYYY", date.getFullYear()).replace("MM", date.getMonth() + 1).replace("DD", date.getDate());
+        console.log($scope.model.formattedDate)
     });
 
     function buildDateObjectFromTime(timeObj) {

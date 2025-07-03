@@ -1,4 +1,5 @@
 <div ng-controller="UmbDateOnlyController">
     <input id="date-only" type="date" ng-model="model.dateValue"/>
-    <button title="Use todays date" class="btn" type="button" ng-click="useTodaysDate()">Today's date</button>
+    <button title="Use todays date" class="btn" type="button" ng-click="useTodaysDate()">Use today's date</button>
+    <p>Selected date: {{model.formattedDate}}</p>
 </div>

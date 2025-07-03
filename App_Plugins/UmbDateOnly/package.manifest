@@ -1,6 +1,6 @@
 {
   "name": "UmbDateOnly",
-  "version": "13.7.6",
+  "version": "13.7.2",
   "allowPackageTelemetry": true,
   "propertyEditors": [
     {
@@ -11,13 +11,20 @@
       "editor": {
         "view": "/App_Plugins/UmbDateOnly/umbdateonly.html",
         "valueType": "JSON"
+      },
+      "prevalues": {
+        "fields": [
+          {
+            "label": "Date Format",
+            "description": "Type a custom date format (e.g., YYYY-MM-DD, DD.MM.YYYY), default (if not set) is YYYY-MM-DD. This only affects backoffice format of the date",
+            "key": "format",
+            "view": "textstring"
+          }
+        ]
       }
     }
   ],
   "javascript": [
     "/App_Plugins/UmbDateOnly/umbdateonly.js"
-  ],
-  "css": [
-    "/App_Plugins/UmbDateOnly/umbdateonly.css"
   ]
 }
