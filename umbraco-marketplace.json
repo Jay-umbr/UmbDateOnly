@@ -8,12 +8,8 @@
     "Url": "",
     "ImageUrl": "https://avatars.githubusercontent.com/u/56038614?v=4",
     "Contributors": [
-      {
-        "Name": "",
-        "Url": ""
-      }
     ],
-    "SyncContributorsFromRepository": "true|false"
+    "SyncContributorsFromRepository": "true"
   },
   "Category": "Developer Tools",
   "Description": "A property editor for date, and date only (C# DateOnly)",
@@ -33,15 +29,15 @@
   ],
   "Screenshots": [
     {
-      "ImageUrl": "./images/dateonly1.png",
+      "ImageUrl": "https://imgur.com/soSNUDj",
       "Caption": "UmbDateOnly property editor in the Content section"
     },
     {
-      "ImageUrl": "./images/dateonly2.png",
+      "ImageUrl": "https://imgur.com/7Zx0bOD",
       "Caption": "Selecting a date via date picker"
     },
     {
-      "ImageUrl": "./images/dateonly3.png",
+      "ImageUrl": "https://imgur.com/DSeZSOX",
       "Caption": "Customizable date output in the backoffice for editor convenience"
     }
   ],
