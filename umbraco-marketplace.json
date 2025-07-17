@@ -9,7 +9,7 @@
     "ImageUrl": "https://avatars.githubusercontent.com/u/56038614?v=4",
     "Contributors": [
     ],
-    "SyncContributorsFromRepository": "true"
+    "SyncContributorsFromRepository": true
   },
   "Category": "Developer Tools",
   "Description": "A property editor for date, and date only (C# DateOnly)",
